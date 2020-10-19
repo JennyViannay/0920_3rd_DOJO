@@ -5,9 +5,19 @@
 // 3 - "fizzbuzz" dans le cas ou le nombre saisi est à la fois un multiple de 3 et de 5
 // 4 - Le nombre dans le cas ou ce dernier est ni un multiple de 3, ni un multiple de 5
 
-function fizzbuzz()
+function fizzBuzz($param) 
 {
-
+    if ($param % 15 == 0) {
+        return 'fizzbuzz';
+    } 
+    if ($param % 3 == 0) {
+        return 'fizz';
+    } 
+    if ($param % 5 == 0) {
+        return 'buzz';
+    } else {
+        return $param;
+    }
 }
 
 // tester la méthode à l'aide de var_dump()

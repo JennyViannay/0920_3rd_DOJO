@@ -7,9 +7,12 @@
 // given number of dragons, will she survive?
 //si mes bullets > (dragon  * 2) => yeaaaah
 
-function jennyIsSurvive()
+function jennyIsSurvive($bullets, $dragons)
 {
-   
+   if($bullets >= ($dragons * 2)){
+       return true;
+   }
+   return false;
 }
 
 // text method 

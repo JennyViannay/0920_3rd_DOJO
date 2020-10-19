@@ -10,7 +10,20 @@
 
 function totalScore(array $games)
 {
-    
+    $count = 0;
+    foreach($games as $game){
+        $array = explode(':', $game);
+        if($array[0] > $array[1]){
+            $count += 3;
+        }
+        if($array[0] < $array[1]){
+            $count += 0;
+        }
+        if($array[0] == $array[1]){
+            $count += 1;
+        }
+    }
+    return $count;
 }
 
 $games1 = ['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']; // 30
